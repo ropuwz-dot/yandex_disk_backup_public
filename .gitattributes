@@ -1,0 +1,11 @@
+* text=auto
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.cmd text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+# Keep the distributable byte-for-byte stable, also in GitHub source ZIPs.
+# SHA256SUMS covers Windows BOM/CRLF scripts and instructions as delivered.
+package/** -text
+*.zip binary

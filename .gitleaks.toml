@@ -1,0 +1,12 @@
+title = "Public backup source secret scan"
+[extend]
+useDefault = true
+# Only deliberately invalid fixture values. Never allowlist an entire file or vendor tree.
+[[allowlists]]
+description = "Clearly labeled nonfunctional synthetic unit-test values"
+regexTarget = "secret"
+regexes = [
+  '^y0_SYNTHETIC_[A-Z_]+$',
+  '^SYNTHETIC_[A-Z_]+$',
+  '^0123456789abcdef0123456789abcdef$'
+]
